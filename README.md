@@ -22,3 +22,23 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# myblog DB設計
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|email|string|null: false|
+|password|string|null: false|
+### Association
+has_many :articles
+
+## articlesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|title|text|null: false|
+|image|text||
+|text|text||
+|user|references|foreign_key: true|
+### Association
+belongs_to :user
