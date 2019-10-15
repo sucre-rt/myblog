@@ -16,8 +16,8 @@
         <a href="#" class="brand-logo">My BL●G</a>
         <% if user_signed_in? %>        
           <ul id="nav-mobile" class="right side-nav">
-            <li><%= link_to "Post", articles_path, class: 'get' %></li>
-            <li><%= link_to "Logout", destroy_user_session_path, class: 'delete' %></li>
+            <li><%= link_to "Post", new_article_path, class: 'post' %></li>
+            <li><%= link_to "Logout", destroy_user_session_path, method: 'delete' %></li>
           </ul>
         <% else %>
           <ul id="nav-mobile" class="right side-nav">
