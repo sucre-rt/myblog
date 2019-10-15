@@ -14,11 +14,17 @@
     <nav>
       <div class="nav-wrapper">
         <a href="#" class="brand-logo">My BL●G</a>
-        <ul id="nav-mobile" class="right side-nav">
-          <li><%= link_to "Signup", new_user_registration_path, class: 'post' %></li>
-          <li><%= link_to "Login", new_user_session_path, class: 'post' %></li>
-          <li><%= link_to "Logout", new_user_registration_path, class: 'post' %></li>
-        </ul>
+        <% if user_signed_in? %>        
+          <ul id="nav-mobile" class="right side-nav">
+            <li><%= link_to "Post", articles_path, class: 'get' %></li>
+            <li><%= link_to "Logout", destroy_user_session_path, class: 'delete' %></li>
+          </ul>
+        <% else %>
+          <ul id="nav-mobile" class="right side-nav">
+            <li><%= link_to "Signup", new_user_registration_path, class: 'post' %></li>
+            <li><%= link_to "Login", new_user_session_path, class: 'post' %></li>
+          </ul>
+        <% end %>
         <!-- Include this line below -->
         <a class="button-collapse" href="#" data-activates="nav-mobile"><i class="mdi-navigation-menu"></i></a>
         <!-- End -->
