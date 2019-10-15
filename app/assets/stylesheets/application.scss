@@ -12,4 +12,14 @@
  *
  *= require_tree .
  *= require_self
+ *= require material_icons
  */
+ @import "./reset";
+ @import "materialize/components/color-variables";
+  $primary-color: color("orange", "lighten-2") !default;
+  $secondary-color: color("yellow", "base") !default;
+ @import "materialize";
+
+ footer{
+   margin-top: -20px;
+ }

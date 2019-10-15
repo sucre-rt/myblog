@@ -7,9 +7,38 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
 
   <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">My BL●G</a>
+        <ul id="nav-mobile" class="right side-nav">
+          <li><a href="menu1.html">Signup</a></li>
+          <li><a href="menu2.html">Login</a></li>
+          <li><a href="menu3.html">Logout</a></li>
+        </ul>
+        <!-- Include this line below -->
+        <a class="button-collapse" href="#" data-activates="nav-mobile"><i class="mdi-navigation-menu"></i></a>
+        <!-- End -->
+      </div>
+    </nav>
     <%= yield %>
+        <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">My BL●G</h5>
+                <p class="grey-text text-lighten-4">Love the life you live. Live the life you love.</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            <a class="grey-text text-lighten-4 right">Thank you.</a>
+            </div>
+          </div>
+        </footer>
   </body>
 </html>
