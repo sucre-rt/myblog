@@ -1,8 +1,10 @@
 class ArticlesController < ApplicationController
   def index
+    @articles = Article.all
   end
 
   def create
+    Articles.create(name: "", image: "", text: "")
   end
 
   def new
