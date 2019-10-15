@@ -15,9 +15,9 @@
       <div class="nav-wrapper">
         <a href="#" class="brand-logo">My BL●G</a>
         <ul id="nav-mobile" class="right side-nav">
-          <li><a href="menu1.html">Signup</a></li>
-          <li><a href="menu2.html">Login</a></li>
-          <li><a href="menu3.html">Logout</a></li>
+          <li><%= link_to "Signup", new_user_registration_path, class: 'post' %></li>
+          <li><%= link_to "Login", new_user_session_path, class: 'post' %></li>
+          <li><%= link_to "Logout", new_user_registration_path, class: 'post' %></li>
         </ul>
         <!-- Include this line below -->
         <a class="button-collapse" href="#" data-activates="nav-mobile"><i class="mdi-navigation-menu"></i></a>
