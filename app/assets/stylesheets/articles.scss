@@ -1,8 +1,35 @@
 .row-main{
   background-color: #FFFAF0;
   padding-bottom: 20px;
-  .collection-item{
-    background-color: #FFEBCD;
+  padding-top: 20px;
+  .content_post{
+    height: 400px;
+    overflow: scroll;
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #777777;
+    background: #FFE4C4;
+    border-top: solid 6px #FFA500;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+    .content_image{
+      float: left;
+      margin: 10px;
+      .content_icon{
+        height: 350px; 
+        width: 350px;
+      }
+    }
+    .content_right{
+      float: left;
+      margin: 20px;
+      .content_title{
+        font-size: 40px;
+
+      }    
+      .content_text{
+        font-size: 20px;
+      }
+    }
   }
 }
 

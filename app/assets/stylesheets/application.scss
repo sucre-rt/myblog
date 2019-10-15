@@ -20,6 +20,11 @@
   $secondary-color: color("yellow", "base") !default;
  @import "materialize";
 
+
+ .nav-wrapper{
+   padding-left: 20px;
+   padding-right: 20px;
+ }
  footer{
    margin-top: -20px;
  }

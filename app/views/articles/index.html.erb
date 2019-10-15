@@ -1,50 +1,20 @@
 <div class="row row-main">
-
-  <div class="col s12 m8 l9">
-    <h4 id="content1">コンテンツ１</h4>
-    <p>
-      テキスト１<br/>
-      テキスト１<br/>
-      テキスト１<br/>
-      テキスト１<br/>
-      テキスト１<br/>
-      テキスト１<br/>
-      テキスト１<br/>
-      テキスト１<br/>
-    </p>
-    <h4 id="content2">コンテンツ２</h4>
-    <p>
-      テキスト２<br/>
-      テキスト２<br/>
-      テキスト２<br/>
-      テキスト２<br/>
-      テキスト２<br/>
-      テキスト２<br/>
-      テキスト２<br/>
-      テキスト２<br/>
-    </p>
-    <h4 id="content3">コンテンツ３</h4>
-    <p>
-      テキスト３<br/>
-      テキスト３<br/>
-      テキスト３<br/>
-      テキスト３<br/>
-      テキスト３<br/>
-      テキスト３<br/>
-      テキスト３<br/>
-      テキスト３<br/>
-    </p>
-    <h4 id="content4">コンテンツ４</h4>
-    <p>
-      テキスト４<br/>
-      テキスト４<br/>
-      テキスト４<br/>
-      テキスト４<br/>
-      テキスト４<br/>
-      テキスト４<br/>
-      テキスト４<br/>
-      テキスト４<br/>
-    </p>
-  </div>
-
+    <% if @articles %>
+      <% @articles.each do |article| %>
+        <div class="content_post">
+          <div class="content_image">
+            <%= image_tag article.image, class: 'content_icon' %>
+          </div>
+          <div class="content_right">
+            <div class="content_title">
+            <%= simple_format(article.title) %>
+            </div>
+            <div class="content_text">
+            <%= simple_format(article.text) %>
+            <span class="name"><%= article.user.name %></span>        
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
 </div>
