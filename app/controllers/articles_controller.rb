@@ -1,8 +1,12 @@
 class ArticlesController < ApplicationController
+  before_action :move_to_index, except: :index
+  
   def index
+    @articles = Article.includes(:user).order("created_at DESC")
   end
 
   def create
+    Article.create(title: article_params[:title], image: article_params[:image], text: article_params[:text], user_id: current_user.id)
   end
 
   def new
@@ -16,5 +20,10 @@ class ArticlesController < ApplicationController
 
   def update
   end 
-  
+
+  private
+  def article_params
+    params.permit(:title, :image, :text)
+  end
+
 end
