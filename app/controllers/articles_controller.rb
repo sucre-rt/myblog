@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    Article.create(title: article_params[:title], image: article_params[:image], text: article_params[:text], user_id: current_user.id)
+    Article.create(article_params)
   end
 
   def new
@@ -23,7 +23,7 @@ class ArticlesController < ApplicationController
 
   private
   def article_params
-    params.permit(:title, :image, :text)
+    params.permit(:title, :image, :text).merge(user_id: current_user.id)
   end
 
   def move_to_index
