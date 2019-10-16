@@ -14,6 +14,15 @@
             <span class="name"><%= article.user.name %></span>        
             </div>
           </div>
+          <% if user_signed_in? && current_user.id == article.user.id %>
+            <div class="content_more">
+              <ul class="content_user">
+                <li>
+                  <%= link_to 'delete', article_path(article.id), method: :delete, data: {confirm: "本当に削除しますか？"}, class: 'btn btn-change' %>
+                </li>
+              </ul>
+            </div>
+          <% end%>
         </div>
       <% end %>
     <% end %>
