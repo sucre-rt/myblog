@@ -34,3 +34,20 @@
   margin-top: 20px;
   width: 30%;
 }
+.content_more{
+  float: right;
+  margin: 20px;
+  width: 90px;
+  .content_user{
+    .btn-change1{
+      background-color: #FFCC33;
+      width: 80px;
+      margin: 0px 30px 10px 0px;
+    }
+    .btn-change2{
+      background-color: #FFCC33;
+      width: 80px;
+      margin: 10px 30px 10px 0px;
+    }
+  }
+}

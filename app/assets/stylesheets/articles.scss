@@ -30,36 +30,22 @@
   .content_right{
     float: left;
     margin: 20px;
-    .content_title{
-      font-size: 40px;
-    }    
-    .content_text{
-      font-size: 18px;
-      margin: 10px;
-    }
-    .content_name{
-      font-size: 20px;
-      margin-right: 20px;
+    .content_show{
       float: left;
-    }
-    .content_time{
-      font-size: 14px;
-      float: left;
-      margin-top: 5px;
-    }
-    .content_more{
-      float: right;
-      margin: 20px;
-      width: 90px;
-      .btn-change1{
-        background-color: #FFCC33;
-        width: 80px;
-        margin: 0px 30px 10px 0px;
+      .content_title{
+        font-size: 40px;
+      }    
+      .content_text{
+        font-size: 18px;
+        margin: 10px;
       }
-      .btn-change2{
-        background-color: #FFCC33;
-        width: 80px;
-        margin: 10px 30px 10px 0px;
+      .content_name{
+        font-size: 20px;
+        margin-right: 20px;
+      }
+      .content_time{
+        font-size: 14px;
+        margin-top: 5px;
       }
     }
   }

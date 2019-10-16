@@ -8,17 +8,19 @@
             </div>
           </div>
           <div class="content_right">
-            <div class="content_title">
-              <%= simple_format(article.title) %>
-            </div>
-            <div class="content_text">
-              <%= simple_format(article.text) %>
-            </div>
-            <div class="content_name">
-              <span class="name"><%= article.user.name %></span>        
-            </div>
-            <div class="content_time">
-              <span class="time"><%= article.created_at.strftime("%Y/%m/%d/%a %H:%M") %></span>
+            <div class="content_show">
+              <div class="content_title">
+                <%= simple_format(article.title) %>
+              </div>
+              <div class="content_text">
+                <%= simple_format(article.text) %>
+              </div>
+              <div class="content_name">
+                <span class="name"><%= article.user.name %></span>        
+              </div>
+              <div class="content_time">
+                <span class="time"><%= article.created_at.strftime("%Y/%m/%d/%a %H:%M") %></span>
+              </div>
             </div>
           </div>
           <% if user_signed_in? && current_user.id == article.user.id %>
