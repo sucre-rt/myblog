@@ -1,0 +1,29 @@
+.field_remember{
+  margin-top: 40px;
+}
+.actions{
+  padding-top: 10px;
+  padding-bottom: 20px;
+  .btn-login{
+    color: #777777;
+    width: 70%;
+  }
+  .btn-signup{
+    color: #777777;
+    width: 70%;
+  }
+  .btn-forget{
+    margin: 40px;
+    color: #777777;
+    width: 70%;
+  }
+}
+
+.devise-content{
+  width: 80%;
+  height: 100%;
+  padding-bottom: 40px;
+  color: #777777;
+  margin: 0 auto;
+  text-align:center;
+}

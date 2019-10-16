@@ -13,42 +13,77 @@
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
     .content_image{
       float: left;
-      margin: 10px;
-      .content_icon{
+      margin: 13px;
+      .image_background{
         height: 350px; 
         width: 350px;
+        background-image: url("/images/border.gif");
+        background-repeat: repeat;
+        .content_icon{
+          height: 350px; 
+          width: 350px;
+          padding: 10px;
+        }
       }
     }
-    .content_right{
+  }
+  .content_right{
+    float: left;
+    margin: 20px;
+    .content_show{
       float: left;
-      margin: 20px;
       .content_title{
         font-size: 40px;
-
       }    
       .content_text{
+        font-size: 18px;
+        margin: 10px;
+      }
+      .content_name{
         font-size: 20px;
+        margin-right: 20px;
       }
-    }
-    .content_more{
-      float: right;
-      margin: 20px;
-      width: 90px;
-      .btn-change1{
-        background-color: #FFCC33;
-        width: 80px;
-        margin: 0px 30px 10px 0px;
-      }
-      .btn-change2{
-        background-color: #FFCC33;
-        width: 80px;
-        margin: 10px 30px 10px 0px;
+      .content_time{
+        font-size: 14px;
+        margin-top: 5px;
       }
     }
   }
 }
 
+
 .new-content{
+  width: 80%;
+  height: 66vh;
   padding: 20px;
   color: #777777;
+  margin: 0 auto;
+  text-align:center;
+  .textarea{
+    height: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .btn-sent{
+    display: inline;
+    .btn{
+      width: 70%;
+      color: #777777;
+    }
+  }
+}
+
+.success{
+  height: 66vh;
+  text-align:center;
+  .message{
+    padding-top: 80px;
+    color: #777777;
+  }
+  .btn-box{
+    padding-top: 80px;
+    .btn-arrange{
+      color: #777777;
+    }
+  }
 }
