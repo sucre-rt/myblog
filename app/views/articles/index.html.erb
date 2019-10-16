@@ -3,15 +3,22 @@
       <% @articles.each do |article| %>
         <div class="content_post">
           <div class="content_image">
-            <%= image_tag article.image, class: 'content_icon' %>
+            <div class="image_background">
+              <%= image_tag article.image, class: 'content_icon' %>
+            </div>
           </div>
           <div class="content_right">
             <div class="content_title">
-            <%= simple_format(article.title) %>
+              <%= simple_format(article.title) %>
             </div>
             <div class="content_text">
-            <%= simple_format(article.text) %>
-            <span class="name"><%= article.user.name %></span>        
+              <%= simple_format(article.text) %>
+            </div>
+            <div class="content_name">
+              <span class="name"><%= article.user.name %></span>        
+            </div>
+            <div class="content_time">
+              <span class="time"><%= article.created_at.strftime("%Y/%m/%d/%a %H:%M") %></span>
             </div>
           </div>
           <% if user_signed_in? && current_user.id == article.user.id %>
