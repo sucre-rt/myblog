@@ -1,13 +1,13 @@
 <div class="row row-main">
   <div class="new-content">
-    <%= form_tag('/articles', method: :post) do %>
+    <%= form_with url: articles_path, method: :post, local: true do |form| %>
       <h3>
         投稿する
       </h3>
-      <input placeholder="title" type="text" name="title">
-      <input placeholder="Image Url" type="text" name="image">
+      <%= form.text_field :title, placeholder: "title" %>
+      <%= form.text_field :image, placeholder: "image URL" %>
       <textarea cols="30" name="text" placeholder="text" rows="10"></textarea>
-      <input type="submit" value="SENT">
+      <%= submit_tag 'SENT' %>
     <% end %>
   </div>
 </div>
