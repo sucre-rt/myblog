@@ -32,9 +32,17 @@
     }
     .content_more{
       float: right;
-      padding: 20px;
-      .btn-change{
+      margin: 20px;
+      width: 90px;
+      .btn-change1{
         background-color: #FFCC33;
+        width: 80px;
+        margin: 0px 30px 10px 0px;
+      }
+      .btn-change2{
+        background-color: #FFCC33;
+        width: 80px;
+        margin: 10px 30px 10px 0px;
       }
     }
   }

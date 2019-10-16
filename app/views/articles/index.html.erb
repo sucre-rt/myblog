@@ -18,7 +18,8 @@
             <div class="content_more">
               <ul class="content_user">
                 <li>
-                  <%= link_to 'delete', article_path(article.id), method: :delete, data: {confirm: "本当に削除しますか？"}, class: 'btn btn-change' %>
+                  <%= link_to 'edit', edit_article_path(article.id), class: 'btn btn-change1' %>
+                  <%= link_to 'delete', article_path(article.id), method: :delete, data: {confirm: "本当に削除しますか？"}, class: 'btn btn-change2' %>
                 </li>
               </ul>
             </div>
