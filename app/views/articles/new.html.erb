@@ -2,12 +2,14 @@
   <div class="new-content">
     <%= form_with url: articles_path, method: :post, local: true do |form| %>
       <h3>
-        投稿する
+        P O S T
       </h3>
       <%= form.text_field :title, placeholder: "title" %>
       <%= form.text_field :image, placeholder: "image URL" %>
-      <textarea cols="30" name="text" placeholder="text" rows="10"></textarea>
-      <%= submit_tag 'SENT' %>
+      <textarea cols="30" name="text" placeholder="text" rows="10" class="textarea"></textarea>
+      <div class="btn-sent">
+        <%= submit_tag 'SENT', class: "btn" %> 
+      </div>
     <% end %>
   </div>
 </div>

@@ -49,6 +49,37 @@
 }
 
 .new-content{
+  width: 80%;
+  height: 66vh;
   padding: 20px;
   color: #777777;
+  margin: 0 auto;
+  text-align:center;
+  .textarea{
+    height: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .btn-sent{
+    display: inline;
+    .btn{
+      width: 70%;
+      color: #777777;
+    }
+  }
+}
+
+.success{
+  height: 66vh;
+  text-align:center;
+  .message{
+    padding-top: 80px;
+    color: #777777;
+  }
+  .btn-box{
+    padding-top: 80px;
+    .btn-arrange{
+      color: #777777;
+    }
+  }
 }

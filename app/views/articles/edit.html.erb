@@ -1,11 +1,15 @@
-  <div class="contents row">
+<div class="row row-main">
+  <div class="new-content">
     <%= form_with url: article_path(@article.id), method: :patch, local: true do |form| %>
       <h3>
-        編集する
+        E D I T
       </h3>
       <%= form.text_field :title, placeholder: "title", value: @article.title, autofocus: true %>
       <%= form.text_field :image, placeholder: "image URL", value: @article.image, autofocus: true %>
-      <textarea cols="30" name="text" placeholder="text" rows="10"><%= @article.text %></textarea>
-      <input type="submit" value="SENT">
+      <textarea cols="30" name="text" placeholder="text" rows="10" class="textarea"><%= @article.text %></textarea>
+      <div class="btn-sent">
+        <%= submit_tag 'SENT', class: "btn" %> 
+      </div>
     <% end %>
   </div>
+</div>
