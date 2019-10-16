@@ -18,9 +18,12 @@ class ArticlesController < ApplicationController
   end
   
   def edit
+    @article = Article.find(params[:id])
   end
 
   def update
+    article = Article.find(params[:id])
+    article.update(article_params) if article.user.id == current_user.id
   end 
 
   private
