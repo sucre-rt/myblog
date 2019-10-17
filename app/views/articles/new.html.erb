@@ -1,6 +1,15 @@
 <div class="row row-main">
   <div class="new-content">
-    <%= form_with url: articles_path, method: :post, local: true do |form| %>
+    <%= form_with url: articles_path, method: :post, model: @article, local: true do |form| %>
+      <% if @article.errors.any? %>
+        <div class="alert">
+          <ul>
+          <% @article.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
       <h3>
         P O S T
       </h3>
