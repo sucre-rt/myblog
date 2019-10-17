@@ -6,10 +6,16 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    Article.create(article_params)
+    @article = Article.create(create_params)
+    if @article.save
+      redirect_to articles_path
+    else
+      render :new
+    end
   end
 
   def new
+    @article = Article.new
   end
 
   def destroy
@@ -23,11 +29,15 @@ class ArticlesController < ApplicationController
 
   def update
     article = Article.find(params[:id])
-    article.update(article_params) if article.user.id == current_user.id
+    article.update(update_params) if article.user.id == current_user.id
   end 
 
   private
-  def article_params
+  def create_params
+    params.require(:article).permit(:title, :image, :text).merge(user_id: current_user.id)
+  end
+
+  def update_params
     params.permit(:title, :image, :text).merge(user_id: current_user.id)
   end
 
