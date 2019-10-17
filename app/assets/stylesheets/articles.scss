@@ -4,6 +4,7 @@
   padding-top: 20px;
   .content_post{
     height: 400px;
+    width: 100vw;
     overflow: scroll;
     padding: 0.5em 1em;
     margin: 2em 0;
@@ -14,14 +15,15 @@
     .content_image{
       float: left;
       margin: 13px;
+      width: 25vw;
       .image_background{
-        height: 350px; 
-        width: 350px;
+        width: 44vh;
+        height: 44vh;
         background-image: url("/images/border.gif");
         background-repeat: repeat;
         .content_icon{
-          height: 350px; 
-          width: 350px;
+          width: 44vh;
+          height: 44vh;
           padding: 10px;
         }
       }
@@ -32,6 +34,7 @@
     margin: 20px;
     .content_show{
       float: left;
+      width: 50vw;
       .content_title{
         font-size: 40px;
       }    
